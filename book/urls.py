@@ -1,13 +1,16 @@
 
 
 from django.urls import path
-from book.views import current_datetime, current_datetime2,display_books
+from book.views import *
 
 
 urlpatterns = [
-    path('book-view/', current_datetime),
-    path('book-view2/', current_datetime2),
+    path('',get_all_book),
+    path('book-view/', book_view),
+
+    path('index/', index),
     path('display-book/', display_books),
+    path('add/', add_book),
 
     
 ]
